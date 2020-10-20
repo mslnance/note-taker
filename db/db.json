@@ -1,3 +1,19 @@
-[{"title":"Test Title","text":"Test text"},
-    {"title":"Call Bank on Friday","text":"Talk to agent in regards to a new account"}
-   ]
+{
+  "notes": [
+    {
+      "title": "Test Title",
+      "text": "Test text",
+      "id": "1843"
+    },
+    {
+      "title": "Test Title",
+      "text": "Test text",
+      "id": "1399"
+    },
+    {
+      "title": "Test Title",
+      "text": "0",
+      "id": "0007"
+    }
+  ]
+}
