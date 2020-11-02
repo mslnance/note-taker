@@ -50,7 +50,7 @@ const deleteNote = (id) =>
     },
   });
 
-const renderActiveNote = () => {
+function renderActiveNote() {
   hide(saveNoteBtn);
 
   if (activeNote.id) {
@@ -59,10 +59,12 @@ const renderActiveNote = () => {
     noteTitle.value = activeNote.title;
     noteText.value = activeNote.title;
   } else {
+    noteTitle.removeAttribute('readonly');
+    noteText.removeAttribute('readonly');
     noteTitle.value = '';
     noteText.value = '';
   }
-};
+}
 
 const handleNoteSave = () => {
   const newNote = {
@@ -86,7 +88,7 @@ const handleNoteDelete = (e) => {
   if (activeNote.id === noteId) {
     activeNote = {};
   }
-
+ 
   deleteNote(noteId).then(() => {
     getAndRenderNotes();
     renderActiveNote();
